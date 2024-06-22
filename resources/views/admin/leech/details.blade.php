@@ -2,11 +2,7 @@
 
 
 @section('content')
-    <a href="{{ route('admin.category.add') }}">
-        <button class="btn btn-primary"style="margin-top:50px;">
-            Thêm mới
-        </button>
-    </a>
+   
     <div class="col-md-12">
         <div class="table-responsive">
             <table class="table">

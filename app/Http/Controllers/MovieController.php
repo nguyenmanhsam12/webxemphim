@@ -206,6 +206,10 @@ class MovieController extends Controller
         //Xóa thể loại
         movie_genre::whereIn('movie_id',[$movie->id])->delete();
 
+        //Xóa danh mục
+        Movie_Category::whereIn('movie_id',[$movie->id])->delete();
+
+
         //Xóa tập phim
         Episode::whereIn('movie_id',[$movie->id])->delete();
 
