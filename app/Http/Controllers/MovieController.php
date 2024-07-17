@@ -167,10 +167,7 @@ class MovieController extends Controller
         
 
         //Thêm hình ảnh
-
         $get_image = $request->file('image');
-
-
         if ($get_image) {
 
             $get_image_name = $get_image->getClientOriginalName(); //hinhanh1.jpg
@@ -262,12 +259,16 @@ class MovieController extends Controller
         // $movie->category_id = $data['category_id'];
 
         foreach($data['genre'] as $gen){
-            $this->movie->genre_id = $gen[0];
+            $movie->genre_id = $gen[0];
         }
 
         //Xử lý cập nhập danh mục
-        foreach($data['category'] as $cate){
-            $this->movie->category_id = $cate[0];
+        // foreach($data['category'] as $cate){
+        //     $movie->category_id = $cate[0];
+        // }
+
+        if(!empty($data['category'])){
+            $movie->category_id = $data['category'][0];   //lấy danh mục đầu tiên làm category
         }
 
         //Thêm hình ảnh
@@ -292,9 +293,7 @@ class MovieController extends Controller
             }
         }
 
-        $movie->update();
-        
-
+        $movie->save();
         $movie->movie_genre()->sync($data['genre']);
         $movie->movie_category()->sync($data['category']);
 

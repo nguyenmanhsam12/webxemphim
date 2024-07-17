@@ -134,10 +134,10 @@
             @foreach ($category_home as $item)
                 <section id="halim-advanced-widget-2">
                     <div class="section-heading">
-                            <span class="h-text">{{ $item->title }}</span>
+                        <span class="h-text">{{ $item->title }}</span>
 
                         <style>
-                            .xemthem{
+                            .xemthem {
                                 position: absolute;
                                 right: 0;
                                 font-weight: 400;
@@ -147,12 +147,12 @@
                             }
                         </style>
 
-                        <a href="{{route('category',$item->slug)}}" title="Phim Bộ"class="xemthem">
+                        <a href="{{ route('category', $item->slug) }}" title="Phim Bộ"class="xemthem">
                             <span class="h-text">Xem thêm</span>
                         </a>
                     </div>
                     <div id="halim-advanced-widget-2-ajax-box" class="halim_box">
-                        @foreach ($item->movie->take(3) as $mov)
+                        @foreach ($item->movie as $mov)
                             <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
                                 <div class="halim-item">
                                     <a class="halim-thumb" href="{{ route('movie', $mov->slug) }}">
@@ -201,6 +201,7 @@
                             </article>
                         @endforeach
 
+                        <div class="clearfix"></div>
 
                     </div>
                 </section>

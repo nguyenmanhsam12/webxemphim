@@ -53,6 +53,9 @@
         .textwidget p a img {
             width: 100%;
         }
+        .input-group-btn{
+            padding-left: 8px;
+        }
     </style>
     <style>
         #header .site-title {
@@ -81,12 +84,14 @@
                         <div class="col-xs-12">
 
                             <div class="input-group col-xs-12">
-                                <form action="{{ route('tim-kiem') }}"method="GET">
+                                <form action="{{ route('tim-kiem') }}"method="GET"class="input-group">
 
                                     <input id="timkiem" type="text" name="search" class="form-control"
                                         placeholder="Tìm kiếm..." autocomplete="off" required>
                                     <i class="animate-spin hl-spin4 hidden"></i>
-                                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                                    </span>
                                 </form>
                             </div>
 
@@ -180,7 +185,8 @@
 
                                 </ul>
                             </li>
-                            <li class="mega dropdown">
+                            {{-- đăng nhập --}}
+                            {{-- <li class="mega dropdown">
                                 <a title="Tài khoản" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Tài khoản <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
@@ -191,7 +197,7 @@
                                     
                                     
                                 </ul>
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </div>

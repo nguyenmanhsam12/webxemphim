@@ -149,8 +149,9 @@ Route::get('leech-movie',[LeechMovieController::class,'leech_movie'])->name('lee
 Route::get('/leech-details/{slug}',[LeechMovieController::class,'leech_details'])->name('leech-details');
 Route::get('/leech-episode/{slug}',[LeechMovieController::class,'leech_episode'])->name('leech-episode');
 Route::post('/leech-store/{slug}',[LeechMovieController::class,'leech_store'])->name('leech-store');
-
 Route::post('/episode-store/{slug}',[LeechMovieController::class,'episode_store'])->name('episode-store');
+
+
 
 
 

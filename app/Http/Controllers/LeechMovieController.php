@@ -89,6 +89,8 @@ class LeechMovieController extends Controller
 
         // chuyển đổi thành mảng
         $resp_movie[] = $resp['movie'];
+        
+        // dd($resp_movie);
 
         $movie = new Movie();
 
@@ -117,15 +119,17 @@ class LeechMovieController extends Controller
 
             //Dùng biểu thức chính quy để lấy ra trailler
 
-            $trailer_url = $res['trailer_url'];
+            if(isset($res['trailer_url']) && !empty($res['trailer_url'])){
+                $trailer_url = $res['trailer_url'];
 
-            preg_match('/v=([^&]+)/', $trailer_url, $matches);
-
-            $video_id = $matches[1];
+                preg_match('/v=([^&]+)/', $trailer_url, $matches);
+    
+                $video_id = $matches[1];
+            }else{
+                $video_id = '';
+            }
 
             $movie->trailer = $video_id;
-
-
 
             $movie->phim_hot = 1;
             $movie->resolution = 0;

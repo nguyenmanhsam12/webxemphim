@@ -39,7 +39,7 @@ class IndexController extends Controller
             $category = $this->category->orderBy('id', 'desc')->where('status', 1)->get();
             $genre = $this->genre->orderBy('id', 'desc')->get();
             $country = $this->country->orderBy('id', 'desc')->get();
-            $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(15)->get();
+            $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(5)->get();
             $phimhot_trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('update', 'DESC')->take(10)->get();
 
 
@@ -54,15 +54,17 @@ class IndexController extends Controller
     {
         
         $phimhot = Movie::withCount('practice')->where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->get();
-        $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(10)->get();
+        $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(5)->get();
         $phimhot_trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('update', 'DESC')->take(10)->get();
         $category = $this->category->orderBy('id', 'desc')->where('status', 1)->get();
         $genre = $this->genre->orderBy('id', 'desc')->get();
         $country = $this->country->orderBy('id', 'desc')->get();
+
         //nested trong laravel
         $category_home = $this->category->with(['movie' => function ($q) {
             $q->withCount('practice')->where('status',1);
         }])->orderBy('id', 'desc')->where('status', 1)->get();
+        
         return view('pages.home', compact('category', 'country', 'genre', 'category_home', 'phimhot', 'phimhot_sidebar', 'phimhot_trailer'));
     }
     public function category($slug)
@@ -71,7 +73,7 @@ class IndexController extends Controller
         $category = $this->category->orderBy('id', 'desc')->where('status', 1)->get();
         $genre = $this->genre->orderBy('id', 'desc')->get();
         $country = $this->country->orderBy('id', 'desc')->get();
-        $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(15)->get();
+        $phimhot_sidebar = Movie::where('phim_hot', 1)->where('status', 1)->orderBy('update', 'DESC')->take(5)->get();
         $phimhot_trailer = Movie::where('resolution', 5)->where('status', 1)->orderBy('update', 'DESC')->take(10)->get();
 
         //Lấy danh mục dựa theo slug và lấy duy nhất 1 bản ghi

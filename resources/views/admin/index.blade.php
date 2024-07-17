@@ -133,7 +133,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <span class="icon-bar"></span>
                         </button>
                         <h1>
-                            <a class="navbar-brand" href="{{ route('admin.index') }}"><span class="fa fa-area-chart"></span> Glance<span
+                            <a class="navbar-brand" href="{{ route('admin.index') }}"><span class="fa fa-area-chart"></span> Phim<span
                                     class="dashboard_text">Trang chủ</span></a>
                         </h1>
                     </div>
@@ -278,7 +278,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <!--toggle button end-->
                 <div class="profile_details_left">
                     <!--notifications of menu start -->
-                    <ul class="nofitications-dropdown">
+                    {{-- <ul class="nofitications-dropdown">
                         <li class="dropdown head-dpdn">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                                 aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">4</span></a>
@@ -472,7 +472,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> --}}
                     <div class="clearfix"></div>
                 </div>
                 <!--notification menu end -->

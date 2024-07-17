@@ -131,7 +131,9 @@
     </div>
 </aside>
 
-<aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4">
+
+{{-- top view --}}
+{{-- <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4">
     <div id="halim_tab_popular_videos-widget-7" class="widget halim_tab_popular_videos-widget">
         <div class="section-bar clearfix">
             <div class="section-title">
@@ -159,7 +161,7 @@
             <div class="tab-pane fade " id="ngay" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
                     <div class="halim-ajax-popular-post-loading hidden"></div>
-                    <div id="halim-ajax-popular-post" class="popular-post">
+                    <div id="halim-ajax-popular-post" class="popular-post"> --}}
                         {{-- <div class="item post-37176">
                             <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
                                 <div class="item-link">
@@ -178,7 +180,7 @@
                                 </span>
                             </div>
                         </div> --}}
-                        <span id="show0"></span>
+                        {{-- <span id="show0"></span>
 
 
 
@@ -188,7 +190,7 @@
             <div class="tab-pane fade" id="tuan" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
                     <div class="halim-ajax-popular-post-loading hidden"></div>
-                    <div id="halim-ajax-popular-post" class="popular-post">
+                    <div id="halim-ajax-popular-post" class="popular-post"> --}}
                         {{-- <div class="item post-37176">
                             <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
                                 <div class="item-link">
@@ -208,7 +210,7 @@
                             </div>
                         </div> --}}
 
-                        <span id="show1"></span>
+                        {{-- <span id="show1"></span>
 
 
                     </div>
@@ -217,7 +219,7 @@
             <div class="tab-pane fade" id="thang" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
                     <div class="halim-ajax-popular-post-loading hidden"></div>
-                    <div id="halim-ajax-popular-post" class="popular-post">
+                    <div id="halim-ajax-popular-post" class="popular-post"> --}}
                         {{-- <div class="item post-37176">
                             <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
                                 <div class="item-link">
@@ -236,7 +238,7 @@
                                 </span>
                             </div>
                         </div> --}}
-
+{{-- 
                         <span id="show2"></span>
 
 
@@ -245,4 +247,4 @@
             </div>
         </div>
     </div>
-</aside>
+</aside> --}}
